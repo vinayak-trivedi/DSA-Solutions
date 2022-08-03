@@ -3,6 +3,7 @@ package com.vinayak;
 import java.util.Arrays;
 
 public class ShuffleTheArray {
+    // Question link -> https://leetcode.com/problems/shuffle-the-array/
     public static void main(String[] args) {
 
         int[] arr = {1, 2, 3, 4, 5, 6};
