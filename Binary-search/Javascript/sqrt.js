@@ -21,20 +21,28 @@
 
 // SOLUTION
 
-function findSqrt(number) {
-  let start = 0;
-  let end = number;
-  let ans = -1;
+
+function findSqrt(x) {
+  let start = 1;
+  let end = x;
+  let ans = 0;
+
+  if (x === 0) {
+    return 0;
+  }
+
+  if (x === 1) {
+    return 1;
+  }
 
   while (start <= end) {
-    let mid = Math.floor(start + (end - start) / 2);
-
-    if (mid * mid === number) {
+    let mid = Math.floor(start + (end - start) /2);
+    let square = mid * mid;
+    if (square === x) {
       return mid;
     }
 
-    if (mid * mid < number) {
-      // this is the potential answer case
+    if (square < x) {
       ans = mid;
       start = mid + 1;
     } else {
