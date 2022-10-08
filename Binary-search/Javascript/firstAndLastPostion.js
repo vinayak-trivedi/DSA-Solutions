@@ -38,7 +38,7 @@ function findFirst (arr, target) {
       end = mid - 1;
     }
   }
-  return first; // which means that the number was not even present
+  return first;
 }
 
 function findLast (arr, target) {
