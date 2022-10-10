@@ -66,6 +66,7 @@ How do we find if the mid is a possible ans for the minimum in the maximum of al
 */ 
 
 function isPossibleSolution(arr, m, mid) {
+  console.log(mid)
   let student = 1;
   let pageSum = 0; // this will used to determine if we have exceeded the page limit
 
