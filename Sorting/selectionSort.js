@@ -1,21 +1,24 @@
-// sort the given array using selection sort
+// sort the array below using selection sort
 
-const array = [5, 2, 4, 1, 0, 8, 11, 9];
+const array = [32, 11, 8, 9, 23, 10];
 
-console.log("unsorted array: ", array);
+console.log("unsorted array: ", array)
 
 for (let i = 0; i < array.length - 1; i++) {
-  // doing array.length - 1 because we do not need to check for the last element of the array it should be sorted at the end
   let minIndex = i;
 
   for (let j = i + 1; j < array.length; j++) {
-    if (array[minIndex] > array[j]) {
+    if (array[j] < array[minIndex]) {
       minIndex = j;
     }
   }
-  const temp = array[i];
-  array[i] = array[minIndex];
-  array[minIndex] = temp;
+  swap(array, i, minIndex)
 }
 
-console.log("sorted array: ", array);
+function swap(arr, firstIndex, secondIndex) {
+  const temp = arr[firstIndex];
+  arr[firstIndex] = arr[secondIndex];
+  arr[secondIndex] = temp;
+}
+
+console.log("Sorted Array: ", array)
