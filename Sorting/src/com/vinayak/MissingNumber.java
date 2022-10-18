@@ -1,6 +1,10 @@
 package com.vinayak;
 
 public class MissingNumber {
+    // given an array which is in the range 0 to n we need to find the missing number
+    // Question link => https://leetcode.com/problems/missing-number/
+
+    // first we will sort the array using cyclic sort and then we will check which is number is not present in it's current index
     public static void main(String[] args) {
         int[] arr = {4, 0, 1, 2};
         System.out.println(missingNumber(arr));
