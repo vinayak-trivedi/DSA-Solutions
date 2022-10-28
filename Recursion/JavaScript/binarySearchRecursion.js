@@ -1,5 +1,11 @@
 // Do binary search on a sorted array using recursion
 function binarySearchRecursion(arr, target, start, end) {
+
+  // base case
+  if (start > end) {
+    return -1;
+  }
+  
   let mid = start + (end - start)/2;
 
   if (arr[mid] === target) {
